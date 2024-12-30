@@ -1,7 +1,6 @@
 {
   "name": "MyProject",
   "dockerFile": "Dockerfile",
-  // "appPort": 8000,
   "customizations": {
     "vscode": {
       "extensions": [
