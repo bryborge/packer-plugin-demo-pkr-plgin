@@ -1,27 +1,30 @@
 package scaffolding
 
+// packersdk.Artifact implementation
 type Artifact struct {
-	// Fields representing your built artifact
+	// StateData should store data such as GeneratedData
+	// to be shared with post-processors
+	StateData map[string]interface{}
 }
 
-func (a *Artifact) BuilderId() string {
-	return "example"
+func (*Artifact) BuilderId() string {
+	return BuilderId
 }
 
 func (a *Artifact) Files() []string {
-	return []string{} // Return list of files created
+	return []string{}
 }
 
-func (a *Artifact) Id() string {
-	return "example"
+func (*Artifact) Id() string {
+	return ""
 }
 
 func (a *Artifact) String() string {
-	return "Example artifact"
+	return ""
 }
 
 func (a *Artifact) State(name string) interface{} {
-	return nil
+	return a.StateData[name]
 }
 
 func (a *Artifact) Destroy() error {
