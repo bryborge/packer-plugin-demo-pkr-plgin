@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	Builder "github.com/bryborge/demo-packer-plugin/builder"
-	Version "github.com/bryborge/demo-packer-plugin/version"
+	scaffoldingBuilder "github.com/bryborge/demo-packer-plugin/builder/scaffolding"
+	scaffoldingVersion "github.com/bryborge/demo-packer-plugin/version"
 
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
 )
 
 func main() {
 	pps := plugin.NewSet()
-	pps.RegisterBuilder("my-builder", new(Builder.Builder))
-	pps.SetVersion(Version.PluginVersion)
+	pps.RegisterBuilder("my-builder", new(scaffoldingBuilder.Builder))
+	// Register Provisioners, Post-Processors, and Datasources here ...
+	pps.SetVersion(scaffoldingVersion.PluginVersion)
 
 	err := pps.Run()
 

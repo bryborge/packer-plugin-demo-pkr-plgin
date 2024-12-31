@@ -1,4 +1,4 @@
-package builder
+package scaffolding
 
 type Artifact struct {
 	// Fields representing your built artifact

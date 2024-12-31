@@ -1,4 +1,4 @@
-package builder
+package scaffolding
 
 import (
 	"context"
@@ -22,8 +22,7 @@ type Builder struct {
 
 func (b *Builder) ConfigSpec() hcldec.ObjectSpec {
 	// TODO: Replace with your own config spec
-	// return b.config.FlatMapstructure().HCL2Spec()
-	return nil
+	return b.config.FlatMapstructure().HCL2Spec()
 }
 
 /**
