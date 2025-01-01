@@ -27,7 +27,8 @@ type Builder struct {
 
 func (b *Builder) ConfigSpec() hcldec.ObjectSpec {
 	// TODO: Replace with your own config spec
-	return b.config.FlatMapstructure().HCL2Spec()
+	// return b.config.FlatMapstructure().HCL2Spec()
+	return (&Config{}).FlatMapstructure().HCL2Spec()
 }
 
 /**
