@@ -22,6 +22,9 @@ builds:
       - linux
       - windows
       - darwin
+    ignore:
+      - goos: linux
+        goarch: amd64
 
 archives:
   - format: tar.gz
