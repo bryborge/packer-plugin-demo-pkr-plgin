@@ -9,7 +9,8 @@
         "IBM.output-colorizer",
         "golang.go",
         "EditorConfig.EditorConfig",
-        "nhoizey.gremlins"
+        "nhoizey.gremlins",
+        "hashicorp.hcl"
       ],
       "settings": {
         "go.useLanguageServer": true
