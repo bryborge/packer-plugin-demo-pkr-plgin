@@ -84,4 +84,8 @@ release:
   #- glob: ./docs.zip
 
 changelog:
-  skip: true
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
