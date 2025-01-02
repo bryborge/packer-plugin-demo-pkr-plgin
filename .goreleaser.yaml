@@ -27,8 +27,8 @@ builds:
       - linux
     goarch:
       - amd64
-    # binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
-    binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
+    # binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
   -
     mod_timestamp: '{{ .CommitTimestamp }}'
     flags:
@@ -55,16 +55,17 @@ builds:
         goarch: '386'
       - goos: linux
         goarch: amd64
-    # binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
-    binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
+    # binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
 archives:
 - format: zip
   files:
     - none*
-  # name_template: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
-  name_template: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+  name_template: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
+  # name_template: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_{{ .Os }}_{{ .Arch }}'
 checksum:
-  name_template: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_SHA256SUMS'
+  name_template: '{{ .ProjectName }}_v{{ .Version }}_SHA256SUMS'
+  # name_template: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_SHA256SUMS'
   algorithm: sha256
 # signs:
 #   - artifacts: checksum
