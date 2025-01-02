@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	scaffoldingBuilder "github.com/bryborge/demo-packer-plugin/builder/scaffolding"
-	scaffoldingVersion "github.com/bryborge/demo-packer-plugin/version"
+	scaffoldingBuilder "github.com/bryborge/demo-pkr-plgin/builder/scaffolding"
+	scaffoldingVersion "github.com/bryborge/demo-pkr-plgin/version"
 
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
 )

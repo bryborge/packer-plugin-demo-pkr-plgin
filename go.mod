@@ -1,4 +1,4 @@
-module github.com/bryborge/demo-packer-plugin
+module github.com/bryborge/demo-pkr-plgin
 
 go 1.23.3
 
