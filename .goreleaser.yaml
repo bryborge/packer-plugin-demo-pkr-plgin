@@ -28,7 +28,7 @@ builds:
     goarch:
       - amd64
     # binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
-    binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_x5.0_{{ .Os }}_{{ .Arch }}'
+    binary: 'packer-plugin-demo-pkr-plgin_{{ .Version }}_x5.0_{{ .Os }}_{{ .Arch }}'
   -
     mod_timestamp: '{{ .CommitTimestamp }}'
     flags:
@@ -56,7 +56,7 @@ builds:
       - goos: linux
         goarch: amd64
     # binary: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
-    binary: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_x5.0_{{ .Os }}_{{ .Arch }}'
+    binary: 'packer-plugin-demo-pkr-plgin_{{ .Version }}_x5.0_{{ .Os }}_{{ .Arch }}'
 archives:
 - format: zip
   files:
