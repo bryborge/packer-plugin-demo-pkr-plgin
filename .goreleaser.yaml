@@ -22,7 +22,7 @@ builds:
     flags:
       - -trimpath #removes all file system paths from the compiled executable
     ldflags:
-      - '-s -w -X {{ .ModulePath }}/version.Version={{.Version}} -X {{ .ModulePath }}/version.VersionPrerelease= '
+      - '-s -w -X {{ .ModulePath }}/version.Version=v{{.Version}} -X {{ .ModulePath }}/version.VersionPrerelease= '
     goos:
       - linux
     goarch:
@@ -34,7 +34,7 @@ builds:
     flags:
       - -trimpath #removes all file system paths from the compiled executable
     ldflags:
-      - '-s -w -X {{ .ModulePath }}/version.Version={{.Version}} -X {{ .ModulePath }}/version.VersionPrerelease= '
+      - '-s -w -X {{ .ModulePath }}/version.Version=v{{.Version}} -X {{ .ModulePath }}/version.VersionPrerelease= '
     goos:
       - netbsd
       - solaris

@@ -1,7 +1,7 @@
 packer {
   required_plugins {
     scaffolding = {
-      version = ">=v0.1.0"
+      version = "v0.1.8"
       source  = "github.com/bryborge/demo-pkr-plgin"
     }
   }
