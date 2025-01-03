@@ -60,7 +60,9 @@ builds:
 archives:
 - format: zip
   files:
-    - none*
+    - binary
+    - LICENSE
+    - README*
   # name_template: '{{ .ProjectName }}_v{{ .Version }}_{{ .Env.API_VERSION }}_{{ .Os }}_{{ .Arch }}'
   name_template: 'packer-plugin-demo-pkr-plgin_v{{ .Version }}_x5.0_{{ .Os }}_{{ .Arch }}'
 checksum:
@@ -81,7 +83,7 @@ checksum:
 #       - "${artifact}"
 release:
   # If you want to manually examine the release before its live, uncomment this line:
-  # draft: true
+  draft: true
   # As part of the release doc files are included as a separate deliverable for consumption by Packer.io.
   # To include a separate docs.zip uncomment the extra_files config and the docs.zip command hook above.
   #extra_files:
